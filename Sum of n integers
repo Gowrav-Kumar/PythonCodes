@@ -1,0 +1,11 @@
+def sum(n):
+    return int((n*(n+1))/2)
+print(sum(int(input("Enter integer: "))))
+
+
+            #or
+
+
+def sum(n):
+    return n if n==1 else n+sum(n-1)
+print(sum(int(input("Enter integer: "))))
