@@ -1,0 +1,3 @@
+def leap(n):
+    return "Leap year" if n%4==0 and n%100!=0 or n%400==0 else "Not a leap year"
+print(leap(int(input("Enter Year: "))))
