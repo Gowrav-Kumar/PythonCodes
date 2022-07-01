@@ -1,0 +1,4 @@
+import math
+def perfsquare(n):
+    return "Perfect square" if math.sqrt(n)-int(math.sqrt(n))== 0 else "Not a perfect square"
+print(perfsquare(int(input("Enter number: "))))
