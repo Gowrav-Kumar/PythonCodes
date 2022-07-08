@@ -3,7 +3,7 @@ a=[]
 for i in s:
     if i.isdigit() and int(i) not in a:
         a.append(int(i))
-print(*a)
+print(*a,sep='')
 
 """
 input: ajhfg3627f6329
