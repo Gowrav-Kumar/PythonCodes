@@ -1,0 +1,10 @@
+s=input()
+a=[]
+for i in s:
+    if i.isdigit() and int(i) not in a:
+        a.append(int(i))
+print(*a)
+
+"""
+input: ajhfg3627f6329
+output: 36279
