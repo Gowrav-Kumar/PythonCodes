@@ -1,0 +1,9 @@
+s=input()
+a=[]
+for i in s:
+    if i.isalpha() and i not in a:
+        a.append(i)
+print(*a,sep='')
+
+input: qwe123rtwequ
+output: qwertu
