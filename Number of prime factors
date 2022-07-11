@@ -1,0 +1,19 @@
+import math
+n=100000
+seive=[True]*n
+seive[0]=seive[1]=False
+for i in range(2,int(math.sqrt(n))+1):
+    if seive[i]:
+        for j in range(i*i,n,i):
+            seive[j]=False
+a=int(input())
+count=0
+for i in range(int(math.sqrt(n))+1):
+    if seive[i]:
+        while a%i==0:
+            count+=1
+            a//=i
+print(count)
+
+input:    500
+output:   5   (2 x 2 x 5 x 5 x 5)
