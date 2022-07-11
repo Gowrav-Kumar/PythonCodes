@@ -1,13 +1,14 @@
 import math
 mini,maxi=map(int,input().split())
-seive=[True]*(maxi+2)
+n=10000
+seive=[True]*n
 seive[0]=seive[1]=False
-for i in range(2,int(math.sqrt(maxi))+1):
+for i in range(2,int(math.sqrt(n))+1):
     if seive[i]:
-        for j in range(i*i,maxi,i):
+        for j in range(i*i,n,i):
             seive[j]=False
 count=0
-for i in range(mini,maxi):
+for i in range(mini,maxi+1):
     if seive[i]:
         count+=1
 print(count)
