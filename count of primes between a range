@@ -1,0 +1,16 @@
+import math
+mini,maxi=map(int,input().split())
+seive=[True]*(maxi+2)
+seive[0]=seive[1]=False
+for i in range(2,int(math.sqrt(maxi))+1):
+    if seive[i]:
+        for j in range(i*i,maxi,i):
+            seive[j]=False
+count=0
+for i in range(mini,maxi):
+    if seive[i]:
+        count+=1
+print(count)
+
+input:  3 10
+output: 3
