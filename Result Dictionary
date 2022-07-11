@@ -1,0 +1,23 @@
+n=int(input())
+dict={}
+for i in range(n):
+    a,b=map(str,input().split())
+    dict[a]=b
+for i in range(n):
+    name=input()
+    if name not in dict:
+        print("No")
+    else:
+        print(dict[name])
+        
+input:  3
+        gowrav Pass
+        hemanth Fail
+        krishna Fail
+        
+        gowrav
+        krishna
+        sai
+output:
+        Pass
+        No
