@@ -1,34 +1,28 @@
 import math
-n=10000001
-seive=[True]*n
-prefix=[0]*n
+m=10000001
+seive=[True]*m
+pf=[0]*m
 seive[0]=seive[1]=False
-x=int(math.sqrt(n))
-for i in range(2,x+1):
+for i in range(2,int(math.sqrt(m))+1):
     if seive[i]:
-        for j in range(i*i,n,i):
+        for j in range(i*i,m,i):
             seive[j]=False
-for i in range(2,n):
+for i in range(m):
     if seive[i]:
-        prefix[i]=prefix[i-1]+1
+        pf[i]=pf[i-1]+1
     else:
-        prefix[i]=prefix[i-1]
-t=int(input())
-i=1
-sum=0
-while(i<=t):
-    m=int(input('enter no:'))
-    print(prefix[m])
-    i+=1
-    sum=sum+prefix[m]
-    print('sum:',sum)
+        pf[i]=pf[i-1]
+n=int(input())
+for i in range(n):
+    a=int(input())
+    print(pf[a])
     
-    input:
+input:
     3
     10
     5
     30
-    output:
+output:
     4
     3
     10
