@@ -1,0 +1,14 @@
+n=int(input())
+l=list(map(int,input().split()))
+d={}
+for i in l:
+    if i not in d:
+        d[i]=1
+    else:
+        d[i]+=1
+num=max(d,key=lambda x:d[x])
+print(num)
+
+input: 10
+       1 2 2 2 3 3 3 4 4 4
+output: 2
