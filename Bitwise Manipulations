@@ -1,0 +1,9 @@
+a,b=map(int,input().split())
+print(a&b)
+print(a|b)
+print(a^b)
+
+input: 20 10
+output: 8
+        27
+        19
