@@ -1,0 +1,8 @@
+nums=list(map(int,input().split()))
+ans=0
+for i in nums:
+    ans^=i
+print(ans)
+
+input: 2 2 3 3 4 5 5
+output: 4
